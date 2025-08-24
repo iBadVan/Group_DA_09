@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <meta charset="UTF-8">
+  <title>Formulario de Registro - CatoLicenciasAQP</title>
+  <meta name="description" content="Formulario de registro para recibir promociones y noticias sobre nuestras licencias originales de Windows y Office.">
+
+  <table width="100%" bgcolor="#003366" cellpadding="20">
+    <tr>
+      <td align="center">
+        <font face="Arial" color="white" size="6"><b>💻 CatoLicenciasAQP 💻</b></font><br>
+        <font face="Arial" color="#ffcc00" size="4">Formulario de Registro</font>
+      </td>
+    </tr>
+  </table>
+
+  <center>
+    <h2 style="color:#003366;">¡Regístrate y recibe nuestras promociones!</h2>
+    <form action="/submit" method="POST" width="80%" cellpadding="10">
+      <!-- Nombre Completo -->
+      <label for="nombre" style="font-size: 18px;">Nombre Completo:</label><br>
+      <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="50" pattern="[A-Za-z\s]+" title="Nombre solo con letras y espacios" placeholder="Ingresa tu nombre completo" style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;"><br><br>
+
+      <!-- Correo Electrónico -->
+      <label for="email" style="font-size: 18px;">Correo Electrónico:</label><br>
+      <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;"><br><br>
+
+      <!-- Teléfono -->
+      <label for="telefono" style="font-size: 18px;">Teléfono (Opcional):</label><br>
+      <input type="tel" id="telefono" name="telefono" pattern="\d{9}" title="Debe ser un número de 9 dígitos" placeholder="Ej. 944180000" style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;"><br><br>
+
+      <!-- Contraseña -->
+      <label for="password" style="font-size: 18px;">Contraseña:</label><br>
+      <input type="password" id="password" name="password" required minlength="8" maxlength="20" placeholder="Contraseña segura" style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;"><br><br>
+
+      <!-- Confirmación de Contraseña -->
+      <label for="confirm-password" style="font-size: 18px;">Confirmar Contraseña:</label><br>
+      <input type="password" id="confirm-password" name="confirm-password" required minlength="8" maxlength="20" placeholder="Confirma tu contraseña" style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;"><br><br>
+
+      <!-- Fecha de Nacimiento -->
+      <label for="birthdate" style="font-size: 18px;">Fecha de Nacimiento:</label><br>
+      <input type="date" id="birthdate" name="birthdate" required style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;"><br><br>
+
+      <!-- Género -->
+      <label for="genero" style="font-size: 18px;">Género:</label><br>
+      <input type="radio" id="masculino" name="genero" value="Masculino" style="margin-right: 10px;">Masculino<br>
+      <input type="radio" id="femenino" name="genero" value="Femenino" style="margin-right: 10px;">Femenino<br>
+      <input type="radio" id="otro" name="genero" value="Otro" style="margin-right: 10px;">Otro<br><br>
+
+      <!-- Selección de Producto -->
+      <label for="producto" style="font-size: 18px;">Producto de interés:</label><br>
+      <select id="producto" name="producto" required style="padding: 10px; width: 100%; border-radius: 5px; margin-bottom: 15px;">
+        <option value="windows11">Windows 11 Pro</option>
+        <option value="office2021">Office 2021 Pro Plus</option>
+        <option value="windows10">Windows 10 Home</option>
+      </select><br><br>
+
+      <!-- Aceptación de Términos -->
+      <label for="terminos" style="font-size: 18px;">
+        <input type="checkbox" id="terminos" name="terminos" required> Acepto los <a href="#">términos y condiciones</a>.
+      </label><br><br>
+
+      <input type="submit" value="Registrar" style="background-color: #ffcc00; color: rgb(0, 0, 0); padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 18px;">
+    </form>
+  </center>
+
+  <table width="100%" bgcolor="#003366" cellpadding="10">
+    <tr>
+      <td align="center">
+        <font face="Arial" color="white" size="3">
+          © 2025 CatoLicenciasAQP - Licencias Originales<br>
+          Arequipa, Perú
+        </font>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
