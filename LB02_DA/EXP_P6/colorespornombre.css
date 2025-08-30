@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 16px; color: #222; }
+h1 { font-size: 22px; margin: 0 0 6px; }
+h2 { font-size: 16px; margin: 14px 0 8px; color: #046a38; }
+p  { margin: 6px 0 12px; }
+
+.fila {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.caja {
+  width: 120px;
+  height: 60px;
+  border: 1px solid #ccc;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  color: #111;                 /* color de texto por defecto (bueno para fondos claros) */
+  background: #f7f7f7;         /* color de respaldo si faltara el nombre */
+}
+
+/* === Colores por nombre (al menos 3 casos) === */
+.c-red    { background: red;    color: #fff; }  /* texto blanco para buen contraste */
+.c-green  { background: green;  color: #fff; }
+.c-blue   { background: blue;   color: #fff; }
+
+/* AQUI PUEDES HACER LA PRUEBA :)*/
+.c-orange { background: orange; }               /* suficiente contraste con texto oscuro */
+.c-purple { background: purple; color: #fff; }
+.c-teal   { background: teal;   color: #fff; }
+
+.nota {
+  background: #f1fbf4;
+  border: 1px solid #cfe9db;
+  padding: 8px;
+  font-size: 13px;
+}

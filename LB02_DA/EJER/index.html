@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>C.D. Talentos Arequipa | Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tu hoja de estilos base -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <!-- Ajustes SOLO para el inicio (más ancho y hero con entrenamiento1) -->
+  <style>
+    .container{ max-width:1200px; }
+
+    /* HERO: imagen más baja + overlay solo sobre la imagen */
+    #hero{
+      position: relative;
+      min-height: 48vh;              /* antes 60vh */
+      padding: 40px 24px;
+      display: grid; place-content: center; gap: .6rem;
+      text-align: left;
+      color: #fff;
+      background: url("img/entrenamiento1.jpg") center/cover no-repeat !important;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    /* capa que oscurece la foto, NO el texto */
+    #hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(10,63,105,.58) 0%, rgba(10,63,105,.35) 100%);
+      pointer-events:none;
+    }
+    /* asegura que el contenido esté por encima del overlay */
+    #hero > *{ position: relative; z-index: 1; }
+    #hero h1{ font-size: clamp(26px, 4vw, 44px); margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,.35); }
+    #hero p{  font-size: clamp(14px, 2.2vw, 18px); margin: .2rem 0 .6rem; }
+
+    /* Botón acento (dorado del logo) para que destaque */
+    .btn-accent{
+      background: #e7b04b;          /* dorado suave */
+      color: #0a3f69;               /* azul del logo para buen contraste */
+      box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    }
+    .btn-accent:hover,
+    .btn-accent:focus-visible{
+      background: #d7a238;          /* un poco más oscuro al hover */
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <nav class="navline container" aria-label="Principal">
+      <ul class="nav-left">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="voley.html">Vóley</a></li>
+      </ul>
+
+      <a class="brand-center" href="index.html" aria-label="C.D. Talentos Arequipa">
+        <img src="img/logoTalentosAQP.jpg" alt="Logo C.D. Talentos Arequipa">
+      </a>
+
+      <ul class="nav-right">
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="https://www.facebook.com/cdtalentosarequipa" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main id="contenido" class="container">
+    <!-- HERO con imagen grande -->
+    <section id="hero" aria-label="Presentación">
+      <h1>Vóley para todas las edades 🏐</h1>
+      <p>
+        <strong>📍 Sede:</strong> Don Bosco 405, Cercado &nbsp;·&nbsp;
+        <strong>⏰ Horario:</strong> 4:00 p.m. – <u>8:30 p.m.</u>
+      </p>
+      <button class="btn btn-accent" onclick="location.href='contacto.html'"><strong>INSCRÍBETE AHORA</strong></button>
+    </section>
+
+    <!-- Sobre el club -->
+    <section class="panel" aria-labelledby="sobre">
+      <h2 id="sobre">Sobre el club</h2>
+      <p>
+        C.D. Talentos Arequipa impulsa el deporte en niñas, niños, jóvenes y adultos con una
+        formación integral: técnica, disciplina y valores. Actualmente desarrollamos los
+        entrenamientos en nuestra sede única de <strong>Don Bosco 405</strong>, en turnos de tarde de
+        <strong>4:00 p.m. a 8:30 p.m.</strong>
+      </p>
+      <p>
+        Nuestro enfoque principal es el <strong>vóley</strong>, con programas por niveles y acompañamiento
+        cercano de nuestros entrenadores. Trabajamos en equipo con las familias para lograr
+        constancia y crecimiento gradual. 💪
+      </p>
+    </section>
+
+    <!-- 3 pilares -->
+    <section class="grid" aria-label="Pilares">
+      <article class="card destacado">
+        <h3>Niveles 🧩</h3>
+        <p><strong>Básico</strong> (fundamentos y coordinación), <strong>Intermedio</strong> (sistemas y táctica) y
+           <strong>Avanzado</strong> (rendimiento y competencia).</p>
+      </article>
+
+      <article class="card">
+        <h3>Metodología 🎯</h3>
+        <p>Trabajo técnico progresivo, ejercicios por objetivos y evaluación constante para
+           asegurar mejoras reales en cada sesión.</p>
+      </article>
+
+      <article class="card">
+        <h3>Valores 🤝</h3>
+        <p>Respeto, esfuerzo, compañerismo y juego limpio como base de toda la experiencia
+           deportiva dentro y fuera de la cancha.</p>
+      </article>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="panel" aria-labelledby="cta-info">
+      <h2 id="cta-info">¿Listo para unirte? ✍️</h2>
+      <p>
+        Puedes escribirnos por WhatsApp, Facebook o correo. Resolvemos dudas sobre turnos,
+        niveles y requisitos. ¡Te esperamos para entrenar juntos!
+      </p>
+      <button class="btn" onclick="location.href='contacto.html'">Ir a Contacto</button>
+    </section>
+  </main>
+
+  <footer class="container" style="padding:24px 16px">
+    <small>© 2025 · C.D. Talentos Arequipa</small>
+  </footer>
+</body>
+</html>

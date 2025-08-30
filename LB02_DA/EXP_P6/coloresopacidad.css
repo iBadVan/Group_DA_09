@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 16px; color: #222; }
+h1 { font-size: 22px; margin: 0 0 8px; }
+h2 { font-size: 16px; margin: 14px 0 8px; }
+
+.fila { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+
+.caja {
+  width: 160px; height: 64px; border: 1px solid #bbb;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; text-align: center;
+  color: #111; /* cambia a #fff si el fondo queda muy oscuro */
+}
+
+/* Fondo ajedrez para apreciar la transparencia */
+.fondo {
+  padding: 12px; border: 1px solid #ddd; background:
+    linear-gradient(45deg, #f2f2f2 25%, transparent 25%) 0 0/16px 16px,
+    linear-gradient(-45deg, #f2f2f2 25%, transparent 25%) 0 0/16px 16px,
+    linear-gradient(45deg, transparent 75%, #f2f2f2 75%) 0 0/16px 16px,
+    linear-gradient(-45deg, transparent 75%, #f2f2f2 75%) 0 0/16px 16px;
+  background-color: #fff;
+}
+
+/* 1) rgba() — rojo con distintos alfa */
+.rgba-100 { background: rgba(255, 0, 0, 1);   color: #fff; }
+.rgba-60  { background: rgba(255, 0, 0, .6);  color: #fff; }
+.rgba-30  { background: rgba(255, 0, 0, .3);  color: #222; }
+
+/* 2) hsla() — azul verdoso (hue 200) con distintos alfa */
+.hsla-100 { background: hsla(200, 100%, 50%, 1);   color: #fff; }
+.hsla-60  { background: hsla(200, 100%, 50%, .6);  color: #fff; }
+.hsla-30  { background: hsla(200, 100%, 50%, .3);  color: #222; }
+
+/* 3) Hex con alfa (#RRGGBBAA) — rojo y sus transparencias */
+.hex-a1 { background: #FF0000FF; color: #fff; } /* 1.00 */
+.hex-a2 { background: #FF000099; color: #fff; } /* ~0.60 */
+.hex-a3 { background: #FF00004D; color: #222; } /* ~0.30 (0x4D=77/255) */
+
+/* 4) opacity — afecta todo el elemento (fondo + texto) */
+.op-100 { background: steelblue; color: #fff; opacity: 1;   }
+.op-60  { background: steelblue; color: #fff; opacity: .6;  }
+.op-30  { background: steelblue; color: #fff; opacity: .3;  }
+
+/* Nota */
+.nota {
+  background: #f1fbf4; border: 1px solid #cfe9db;
+  padding: 8px; font-size: 13px; margin-top: 10px;
+}

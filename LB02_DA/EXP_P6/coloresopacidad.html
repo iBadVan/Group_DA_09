@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Práctica 06 (e) - Colores con opacidad</title>
+  <link rel="stylesheet" href="coloresopacidad.css" />
+</head>
+<body>
+  <h1>Colores con opacidad</h1>
+  <p>Comparamos opacidad usando <strong>rgba()</strong>, <strong>hsla()</strong>, <strong>#RRGGBBAA</strong> y la propiedad <strong>opacity</strong>.</p>
+
+  <!-- Fondo ajedrez para ver la transparencia -->
+  <div class="fondo">
+
+    <h2>1) rgba(r, g, b, a)</h2>
+    <div class="fila">
+      <div class="caja rgba-100">rgba(255,0,0,<b>1</b>)</div>
+      <div class="caja rgba-60">rgba(255,0,0,<b>0.6</b>)</div>
+      <div class="caja rgba-30">rgba(255,0,0,<b>0.3</b>)</div>
+    </div>
+
+    <h2>2) hsla(h, s, l, a)</h2>
+    <div class="fila">
+      <div class="caja hsla-100">hsla(200,100%,50%,<b>1</b>)</div>
+      <div class="caja hsla-60">hsla(200,100%,50%,<b>0.6</b>)</div>
+      <div class="caja hsla-30">hsla(200,100%,50%,<b>0.3</b>)</div>
+    </div>
+
+    <h2>3) Hex con alfa (#RRGGBBAA)</h2>
+    <div class="fila">
+      <div class="caja hex-a1">#FF0000<b>FF</b></div>
+      <div class="caja hex-a2">#FF0000<b>99</b></div>
+      <div class="caja hex-a3">#FF0000<b>4D</b></div>
+    </div>
+
+    <h2>4) Propiedad opacity (afecta TODO el elemento)</h2>
+    <div class="fila">
+      <div class="caja op-100">opacity: <b>1</b></div>
+      <div class="caja op-60">opacity: <b>0.6</b></div>
+      <div class="caja op-30">opacity: <b>0.3</b></div>
+    </div>
+
+  </div>
+
+  <p class="nota">
+   <STRONG>Diferencia clave:</STRONG> usar <code>rgba/hsla/hex8</code> hace transparente solo el <em>color</em> (por ejemplo, el <em>fondo</em>), 
+    mientras que <code>opacity</code> vuelve transparente <strong>todo</strong> el elemento (incluido el texto e hijos).
+  </p>
+</body>
+</html>

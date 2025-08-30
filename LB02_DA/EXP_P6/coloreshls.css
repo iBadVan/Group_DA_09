@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 16px; color: #222; }
+h1 { font-size: 22px; margin: 0 0 6px; }
+h2 { font-size: 16px; margin: 14px 0 8px; color: #046a38; }
+p  { margin: 6px 0 12px; }
+
+.fila {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.caja {
+  width: 170px;
+  height: 70px;
+  border: 1px solid #ccc;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  color: #111;              /* cambia a #fff en fondos muy oscuros */
+}
+
+/* === 1) Diferentes matices (Hue) === */
+.hsl-rojo  { background: hsl(  0, 100%, 50%); color: #fff; } /* rojo */
+.hsl-verde { background: hsl(120, 100%, 35%); color: #fff; } /* verde oscuro */
+.hsl-azul  { background: hsl(240, 100%, 50%); color: #fff; } /* azul */
+
+/* === 2) Misma tonalidad (200°), variar Saturation/Lightness === */
+.hsl-sat-baja { background: hsl(200, 30%, 50%);  color: #111; } /* menos saturado */
+.hsl-sat-alta { background: hsl(200, 90%, 50%);  color: #fff; } /* muy saturado */
+.hsl-luz-alta { background: hsl(200, 90%, 80%);  color: #123; } /* más claro */
+
+/* Nota */
+.nota {
+  background: #f1fbf4;
+  border: 1px solid #cfe9db;
+  padding: 8px;
+  font-size: 13px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 05 (b) - Medidas Relativas</title>
+  <link rel="stylesheet" href="medidasrelativas.css">
+</head>
+<body>
+  <h1>Medidas relativas en CSS</h1>
+  <p>Comparación con <strong>em</strong>, <strong>rem</strong>, <strong>%</strong>, <strong>vh</strong>, <strong>vw</strong>.</p>
+
+  <!-- EM: relativo al font-size del elemento padre -->
+  <h2>em (relativo al padre)</h2>
+  <div class="grupo">
+    <div class="em-base">
+      <p>Padre con font-size: 16px</p>
+      <div class="box em-1">1em</div>
+      <div class="box em-2">2em</div>
+      <div class="box em-3">3em</div>
+    </div>
+
+    <div class="em-base grande">
+      <p>Padre con font-size: 20px</p>
+      <div class="box em-1">1em</div>
+      <div class="box em-2">2em</div>
+      <div class="box em-3">3em</div>
+    </div>
+  </div>
+
+  <!-- REM: relativo al font-size raíz (html) -->
+  <h2>rem (relativo a la raíz)</h2>
+  <div class="grupo">
+    <div class="box rem-1">1rem</div>
+    <div class="box rem-2">2rem</div>
+    <div class="box rem-3">3rem</div>
+  </div>
+
+  <!-- %: relativo al tamaño del contenedor -->
+  <h2>% (relativo al contenedor)</h2>
+  <div class="contenedor-porc">
+    <div class="barra w25">25%</div>
+    <div class="barra w50">50%</div>
+    <div class="barra w75">75%</div>
+  </div>
+
+  <!-- VH: alto relativo al viewport -->
+  <h2>vh (alto relativo a la ventana)</h2>
+  <div class="grupo">
+    <div class="box vh-10">10vh de alto</div>
+    <div class="box vh-20">20vh de alto</div>
+    <div class="box vh-30">30vh de alto</div>
+  </div>
+
+  <!-- VW: ancho relativo al viewport -->
+  <h2>vw (ancho relativo a la ventana)</h2>
+  <div class="grupo">
+    <div class="box vw-20">20vw de ancho</div>
+    <div class="box vw-40">40vw de ancho</div>
+    <div class="box vw-60">60vw de ancho</div>
+  </div>
+
+  <hr>
+  <p><strong>PRUEBA EN:</strong> intenta redimensionar la ventana del navegador para ver cómo cambian <code>vh</code> y <code>vw</code>, y modifica el tamaño de fuente del documento para observar <code>em</code> y <code>rem</code>.</p>
+</body>
+</html>

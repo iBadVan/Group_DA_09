@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 16px; color: #222; }
+h1 { font-size: 22px; margin: 0 0 6px; }
+h2 { font-size: 16px; margin: 14px 0 8px; color: #046a38; }
+p  { margin: 6px 0 12px; }
+
+.fila { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.caja {
+  width: 150px; height: 70px; border: 1px solid #ccc;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: #111; /* cambia a #fff si el fondo es oscuro */
+}
+
+/* === #RRGGBB === */
+.hex-rojo   { background: #FF0000; color: #fff; }
+.hex-verde  { background: #00FF00; color: #113; }
+.hex-azul   { background: #0000FF; color: #fff; }
+
+.hex-naranja{ background: #FFA500; color: #222; }
+.hex-morado { background: #800080; color: #fff; }
+.hex-teal   { background: #008080; color: #fff; }
+
+/* === shorthand #RGB (equivale a #RRGGBB duplicando dígitos) === */
+.hex-f00    { background: #F00;    color: #fff; }  /* = #FF0000 */
+.hex-0f0    { background: #0F0;    color: #113; }  /* = #00FF00 */
+.hex-00f    { background: #00F;    color: #fff; }  /* = #0000FF */
+
+.nota {
+  background: #f1fbf4;
+  border: 1px solid #cfe9db;
+  padding: 8px;
+  font-size: 13px;
+}

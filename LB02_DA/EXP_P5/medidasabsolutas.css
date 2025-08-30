@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+h1 { color: darkblue; }
+h2 { margin-top: 20px; color: green; }
+
+div {
+  background-color: lightblue;
+  border: 1px solid navy;
+  margin: 5px 0;
+  display: inline-block;
+  text-align: center;
+}
+
+/* cm */
+.cm1 { width: 2cm; height: 1cm; }
+.cm2 { width: 4cm; height: 2cm; }
+.cm3 { width: 6cm; height: 3cm; }
+
+/* mm */
+.mm1 { width: 20mm; height: 10mm; }
+.mm2 { width: 40mm; height: 20mm; }
+.mm3 { width: 60mm; height: 30mm; }
+
+/* in */
+.in1 { width: 1in; height: 0.5in; }
+.in2 { width: 2in; height: 1in; }
+.in3 { width: 3in; height: 1.5in; }
+
+/* px */
+.px1 { width: 96px; height: 48px; }
+.px2 { width: 192px; height: 96px; }
+.px3 { width: 288px; height: 144px; }
+
+/* pt */
+.pt1 { width: 72pt; height: 36pt; }
+.pt2 { width: 144pt; height: 72pt; }
+.pt3 { width: 216pt; height: 108pt; }
+
+/* pc */
+.pc1 { width: 6pc; height: 3pc; }
+.pc2 { width: 12pc; height: 6pc; }
+.pc3 { width: 18pc; height: 9pc; }
