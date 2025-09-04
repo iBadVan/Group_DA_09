@@ -1,0 +1,29 @@
+/* 1. Selecciona todos los elementos <a> cuyo atributo href comienza con "https://" */
+a[href^="https://"] {
+  color: green;
+  text-decoration: underline;
+}
+
+/* 2. Selecciona todos los elementos <input> cuyo atributo type contiene la palabra "text" */
+input[type*="text"] {
+  background-color: lightblue;
+  padding: 5px;
+}
+
+/* 3. Selecciona todos los elementos <input> cuyo atributo name termina con "email" */
+input[name$="email"] {
+  border: 2px solid red;
+  padding: 5px;
+}
+
+/* 4. Selecciona todos los elementos <input> cuyo atributo id comienza con "user" */
+input[id^="user"] {
+  background-color: yellow;
+  padding: 8px;
+}
+
+/* 5. Selecciona todos los elementos <p> cuyo atributo class contiene la palabra "highlight" */
+p[class*="highlight"] {
+  font-size: 1.2em;
+  color: purple;
+}
