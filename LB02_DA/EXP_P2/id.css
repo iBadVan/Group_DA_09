@@ -1,0 +1,24 @@
+
+#titulo {
+    color: darkblue;
+    text-align: center;
+}
+
+#intro {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#contenido {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#pie {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+}

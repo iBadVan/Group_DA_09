@@ -1,0 +1,45 @@
+button::before {
+  content: "🔍";
+  margin-right: 8px;
+}
+p::first-line {
+  color: green;
+  font-style: italic;
+}
+blockquote::before {
+  content: "“";
+  font-size: 3em;
+  margin-right: 10px;
+}
+
+blockquote::after {
+  content: "”";
+  font-size: 3em;
+  margin-left: 10px;
+}
+h3::first-letter {
+  font-size: 1.5em;
+  color: black;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-top: 10px;
+}
+div::before {
+  content: ">";
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: blue;
+}
+div::after{
+    content: "<";
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: blue;
+}
+
+

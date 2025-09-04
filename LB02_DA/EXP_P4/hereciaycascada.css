@@ -1,0 +1,78 @@
+/* 1. Establecer el color de texto para el cuerpo, que será heredado por los elementos dentro */
+body {
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* 2. Establecer el tamaño de la fuente para todo el cuerpo */
+body {
+  font-size: 16px;
+}
+
+/* 3. Hacer que todos los párrafos dentro del cuerpo hereden las propiedades de font-family y color */
+p {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* 4. Definir el color del enlace y los enlaces heredarán este color */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 5. Establecer el tamaño de fuente para las cabeceras, heredado por los elementos dentro */
+h1, h2, h3 {
+  font-size: 2em;
+  font-family: inherit;
+}
+
+/* 6. Los botones heredarán las propiedades de color de fondo y color del texto */
+button {
+  background-color: inherit;
+  color: inherit;
+  padding: 10px;
+}
+
+/* 7. Establecer la propiedad line-height para todo el contenido de un div */
+div {
+  line-height: 1.6;
+}/* 1. La propiedad `font-size` para los elementos <h1> */
+h1 {
+  font-size: 2.5em;
+  color: red; /* Esta es la primera regla */
+}
+
+/* 2. Regla más específica para <h1> que sobreescribe el color */
+h1 {
+  color: blue; /* Esta es la última regla y sobreescribe el color */
+  font-size: 3em; /* Esta también es una regla que sobrescribe el tamaño de fuente */
+}
+
+/* 3. Regla de estilo para <p> */
+p {
+  color: green; /* Color del texto por defecto */
+}
+
+/* 4. Aplicando estilo con mayor especificidad: elemento con clase .highlight */
+p.highlight {
+  color: orange; /* Esta regla sobreescribe el color del párrafo */
+  font-weight: bold; /* Añadir negrita */
+}
+
+/* 5. Aplicando estilos a los <div> con ID específico */
+#container {
+  background-color: yellow;
+  padding: 20px;
+}
+
+/* 6. Si un div tiene la clase .bordered, la regla de color de fondo será la siguiente */
+div.bordered {
+  background-color: lightblue; /* Cambia el fondo cuando se aplica la clase */
+  padding: 15px;
+}
+
+/* 7. Regla más específica aplicada a div con ID */
+#container.bordered {
+  background-color: lightgreen; /* La especificidad de la combinación ID + clase tiene mayor peso */
+}

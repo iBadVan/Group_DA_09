@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Atributos CSS</title>
+    <style>
+        /* Selecciona todos los enlaces <a> cuyo atributo 'href' contiene la palabra 'Windows' */
+        a[href*="Windows"] {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        /* Selecciona todos los elementos <img> cuyo atributo 'alt' contiene la palabra 'Windows' */
+        img[alt*="Windows"] {
+            border: 3px solid #007bff;
+        }
+
+        /* Selecciona todos los enlaces <a> que no tienen el atributo 'href' (por ejemplo, no están definidos) */
+        a[href="#"] {
+            color: grey;
+        }
+
+        /* Selecciona todos los párrafos <p> cuyo contenido es superior a $50 */
+        p {
+            font-weight: bold;
+            color: green;
+        }
+
+        /* Selecciona todos los elementos input de tipo texto */
+        input[type="text"] {
+            border: 2px solid #007bff;
+            padding: 5px;
+            border-radius: 60px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Enlace cuyo href contiene la palabra Windows -->
+    <a href="https://www.microsoft.com/Windows">Descargar Windows</a><br>
+
+    <!-- Enlace cuyo href no está definido -->
+    <a href="#">Próximamente</a><br>
+
+    <!-- Imagen cuyo alt contiene la palabra Windows -->
+    <img src="windows-logo.png" alt="Logo de Windows" width="150"><br>
+
+    <!-- Párrafo de ejemplo -->
+    <p>Precio: $75</p>
+    <p>Precio: $30</p>
+
+    <!-- Campo de texto -->
+    <input type="text" placeholder="Escribe tu nombre"><br>
+    <input type="text" placeholder="Correo electrónico">
+
+</body>
+</html>

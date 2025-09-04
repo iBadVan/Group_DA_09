@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Herencia y Cascada en CSS</title>
+    <link rel="stylesheet" href="hereciaycascada.css">
+</head>
+<body>
+    <div id="container" class="bordered">
+        <h1>Encabezado de prueba (Herencia)</h1>
+        <p>Este es un párrafo de prueba que hereda las propiedades de color del body.</p>
+        <p class="highlight">Este párrafo tiene una clase que cambia su color a naranja y lo pone en negrita.</p>
+        <button>Botón de prueba (Cascada)</button>
+
+        <section class="nested">
+            <h2>Encabezado dentro de un <code>section</code></h2>
+            <p>Este párrafo está dentro de un <code>section</code>, lo que puede afectar la herencia.</p>
+        </section>
+
+        <div class="highlight">
+            <p>Otro párrafo con clase "highlight" dentro de un div.</p>
+        </div>
+    </div>
+</body>
+</html>

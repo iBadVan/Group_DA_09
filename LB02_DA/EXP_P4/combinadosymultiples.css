@@ -1,0 +1,71 @@
+/* 1. Combinación de descendientes: aplica estilos a los <span> dentro de <p> */
+p span {
+  color: blue;
+  font-weight: bold;
+}
+
+/* 2. Combinación de hijo directo: aplica estilos solo a <li> que son hijos directos de <ul> */
+ul > li {
+  list-style-type: square;
+  color: green;
+}
+
+/* 3. Combinación de adyacentes: aplica estilos a <p> que viene inmediatamente después de un <h2> */
+h2 + p {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+/* 4. Combinación de hermanos generales: aplica estilos a todos los <p> que siguen a un <h2> */
+h2 ~ p {
+  color: orange;
+}
+
+/* 5. Combinación de atributo: aplica estilos a todos los <input> con el atributo type="text" */
+input[type="text"] {
+  border: 2px solid #ccc;
+  padding: 5px;
+}
+
+/* 6. Combinación de clase y elemento: aplica estilos a todos los <div> con clase "highlight" */
+div.highlight {
+  background-color: yellow;
+  padding: 10px;
+}
+
+/* 7. Combinación de pseudo-clase y elemento: aplica estilos a los <a> cuando están en estado hover */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+
+/* 1. Múltiples elementos: aplica el mismo estilo a <h1>, <h2> y <h3> */
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: darkblue;
+}
+
+/* 2. Múltiples clases: aplica el mismo estilo a los elementos con clases "bold" y "italic" */
+.bold, .italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* 3. Múltiples elementos con clases: aplica el mismo estilo a <div> con clase "container" y <section> con clase "content" */
+div.container, section.content {
+  padding: 20px;
+  margin: 10px;
+}
+
+/* 4. Múltiples pseudo-clases: aplica el mismo estilo a los enlaces en estado hover y active */
+a:hover, a:active {
+  color: green;
+  text-decoration: none;
+}
+
+/* 5. Múltiples atributos: aplica el mismo estilo a los <input> con type "text" y "email" */
+input[type="text"], input[type="email"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+}

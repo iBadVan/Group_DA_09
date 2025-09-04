@@ -1,0 +1,29 @@
+/* Selecciona todos los enlaces <a> cuyo atributo 'href' contiene la palabra 'Windows' */
+a[href*="Windows"] {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Selecciona todos los elementos <img> cuyo atributo 'alt' contiene la palabra 'Windows' */
+img[alt*="Windows"] {
+    border: 3px solid #007bff;
+}
+
+/* Selecciona todos los enlaces <a> que no tienen el atributo 'href' (por ejemplo, no están definidos) */
+a[href="#"] {
+    color: grey;
+}
+
+/* Selecciona todos los párrafos <p> cuyo contenido es superior a $50 */
+p {
+    font-weight: bold;
+    color: green;
+}
+/*  Selecciona todos los elementos input en el documento y les da un borde de color azul de 2 px, */
+input[type="text"]{
+    border: 2px solid #007bff;
+    padding: 5px;
+    border-radius: 60px;
+    background-color: black;
+    color:white;
+}
