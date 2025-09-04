@@ -1,0 +1,25 @@
+
+.titulo-principal {
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.seccion {
+    padding: 15px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.especial {
+    background-color: #d1e7dd;
+    border: 2px solid #0f5132;
+}
+
+.pie {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+}
