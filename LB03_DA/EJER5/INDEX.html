@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 6 de Grid</title>
+<style>
+  :root{ --gap:18px; --bg:#f1f2f4; }
+
+  body{ margin:0; font-family:system-ui, sans-serif; }
+
+  .hero{
+    max-width:1200px; margin:auto;
+    padding: 28px clamp(16px,5vw,48px);
+    display:flex; justify-content:space-between; align-items:flex-start; gap:24px;
+  }
+  .hero h1{ margin:.2rem 0 .4rem; font-size:clamp(1.6rem, 2.3vw, 2.2rem); }
+  .hero p{ margin:0; color:#666; max-width:58ch; }
+  .btn{ padding:.8rem 1.1rem; background:#111; color:#fff; border-radius:4px; text-decoration:none; }
+
+  .grid{
+    max-width:1200px; margin:auto;
+    display:grid;
+    grid-gap:var(--gap);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 130px);
+    grid-template-areas:
+      "boots boots boots shorts shorts"
+      "boots boots boots vest   vest"
+      "shortA shortA lamp lamp lamp"
+      "redVest redVest lamp lamp lamp"
+      "shirt  shirt  shirt rain  rain"
+      "shirt  shirt  shirt mochila mochila";
+  }
+
+  .product{
+    display:flex; align-items:center; justify-content:center;
+    background:var(--bg); border-radius:12px; overflow:hidden;
+  }
+  .product img{ max-width:70%; max-height:70%; object-fit:contain; }
+
+  .boots    { grid-area: boots; }
+  .shorts   { grid-area: shorts; }
+  .vest     { grid-area: vest; }
+  .shortA   { grid-area: shortA; }
+  .lamp     { grid-area: lamp; }
+  .redVest  { grid-area: redVest; }
+  .shirt    { grid-area: shirt; }
+  .rain     { grid-area: rain; }
+  .mochila  { grid-area: mochila; }
+
+  @media(max-width:900px){
+    .grid{
+      grid-template-columns:repeat(2,1fr);
+      grid-template-areas:none;
+      grid-auto-rows:120px;
+    }
+    .product{ grid-area:auto; }
+    .hero{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div>
+    <h1>Welcome To Outfitter</h1>
+    <p>Whether it's fishing, rafting our country's rivers, or the hiking adventure of a lifetime — we match you with the clothes and equipment to make your trip comfortable and memorable.</p>
+  </div>
+  <a class="btn" href="#">SHOP THE COLLECTION</a>
+</section>
+
+<section class="grid">
+  <div class="product boots"><img src="img5/botas.jpg" alt="Botas"></div>
+  <div class="product shorts"><img src="img5/shorts-jeans.jpg" alt="Shorts jeans"></div>
+  <div class="product vest"><img src="img5/chaleco-cafe.jpg" alt="Chaleco café"></div>
+  <div class="product shortA"><img src="img5/short-azul.jpg" alt="Short azul"></div>
+  <div class="product lamp"><img src="img5/linterna-frontal.jpg" alt="Linterna"></div>
+  <div class="product redVest"><img src="img5/chaleco-rojo.jpg" alt="Chaleco rojo"></div>
+  <div class="product shirt"><img src="img5/camisa-azul.jpg" alt="Camisa azul"></div>
+  <div class="product rain"><img src="img5/botas-lluvia.jpg" alt="Botas de lluvia"></div>
+  <div class="product mochila"><img src="img5/mochila-roja.jpg" alt="Mochila roja"></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 6 de Grid Responsive</title>
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ font-family:system-ui, sans-serif; line-height:1.5; padding:20px; }
+
+  header{ max-width:1200px; margin:0 auto 20px; text-align:center; }
+  header h1{ font-size:2rem; margin-bottom:12px; }
+  header p{ color:#555; max-width:800px; margin:auto; }
+
+  .grid{
+    display:grid;
+    gap:12px;
+    max-width:1200px;
+    margin:24px auto;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(3, 240px);
+    grid-template-areas:
+      "one   one   two   two"
+      "three four  four  seven"
+      "five  six   six   seven";
+  }
+
+  .item{
+    width:100%; height:100%;
+    background-size:cover;
+    background-position:center;
+    border-radius:8px;
+    border:1px solid #000;
+  }
+
+  .one   { grid-area:one;   background-image:url("img6/1.png"); }
+  .two   { grid-area:two;   background-image:url("img6/2.png"); }
+  .three { grid-area:three; background-image:url("img6/3.png"); }
+  .four  { grid-area:four;  background-image:url("img6/4.png"); }
+  .five  { grid-area:five;  background-image:url("img6/5.png"); }
+  .six   { grid-area:six;   background-image:url("img6/6.png"); }
+  .seven { grid-area:seven; background-image:url("img6/7.png"); }
+
+  @media(max-width: 768px){
+    .grid{
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 180px;
+      grid-template-areas:
+        "one   one"
+        "two   two"
+        "three four"
+        "five  seven"
+        "six seven";
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ejercicio 6 de Grid Responsive</h1>
+  <p>
+    Este ejercicio muestra cómo usar <strong>CSS Grid</strong> para crear un diseño adaptable.
+    En pantallas grandes (escritorio) se usa una distribución compleja con 
+    <code>grid-template-areas</code> que forma un mosaico de 7 bloques diferentes.  
+    En pantallas pequeñas (móviles), mediante un <em>breakpoint</em>, la grilla se simplifica a 
+    <strong>2 columnas</strong>, lo que permite que el contenido fluya de manera más legible.
+    Cada bloque tiene un borde negro para diferenciar claramente las áreas.
+  </p>
+</header>
+
+<div class="grid">
+  <div class="item one"></div>
+  <div class="item two"></div>
+  <div class="item three"></div>
+  <div class="item four"></div>
+  <div class="item five"></div>
+  <div class="item six"></div>
+  <div class="item seven"></div>
+</div>
+
+</body>
+</html>
