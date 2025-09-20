@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercadito Local — Flexbox + breakpoints</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111;
+      --muted:#555;
+      --line:#e5e5e5;
+      --brand:#0a7;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial, Helvetica, sans-serif;color:var(--text);background:var(--bg);}
+
+    header{border-bottom:1px solid var(--line);}
+    .nav{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+    .brand{font-weight:bold}
+    .menu{display:flex;gap:12px}
+    .menu a{color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:6px}
+    .menu a:hover{background:#f5f5f5;color:var(--text)}
+
+    .hero{max-width:1000px;margin:20px auto;padding:0 16px;display:flex;gap:16px;align-items:center}
+    .hero .text{flex:1 1 400px}
+    .hero h1{margin:6px 0 8px;font-size:28px}
+    .hero p{margin:0 0 12px;color:var(--muted)}
+    .hero .aside{flex:1 1 300px;border:1px solid var(--line);border-radius:8px;padding:16px;text-align:center}
+    .btn{background:var(--brand);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+
+    .section{max-width:1000px;margin:0 auto 32px;padding:0 16px}
+    .section h2{font-size:20px;margin:12px 0}
+    .grid{display:flex;gap:16px;flex-wrap:wrap}
+    .card{flex:1 1 300px;border:1px solid var(--line);border-radius:8px;padding:12px}
+    .card h3{margin:8px 0 6px}
+    .card p{margin:0;color:var(--muted)}
+
+    footer{border-top:1px solid var(--line);padding:12px 16px;color:var(--muted);text-align:center}
+
+    @media (max-width:900px){
+      .hero{flex-direction:column}
+      .card{flex:1 1 45%}
+    }
+    @media (max-width:480px){
+      .menu{flex-wrap:wrap}
+      .card{flex:1 1 100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="principal">
+      <div class="brand">Mercadito Local</div>
+      <div class="menu">
+        <a href="#productos">Productos</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="text">
+        <h1>Frutas y verduras frescas, directo del productor.</h1>
+        <p>Ejemplo práctico para practicar Flexbox con dos breakpoints: 900px y 480px.</p>
+        <button class="btn">Ver catálogo</button>
+      </div>
+      <aside class="aside">Área de imagen (placeholder)</aside>
+    </section>
+
+    <section class="section" id="productos">
+      <h2>Productos destacados</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Palta Hass</h3>
+          <p>Crema natural · S/ 7 x kg</p>
+        </article>
+        <article class="card">
+          <h3>Tomate Italiano</h3>
+          <p>Para salsa o ensalada · S/ 3.5 x kg</p>
+        </article>
+        <article class="card">
+          <h3>Fresa de Chiguata</h3>
+          <p>Dulce y fresca · S/ 9 x bandeja</p>
+        </article>
+        <article class="card">
+          <h3>Zanahoria</h3>
+          <p>Color y sabor · S/ 2.5 x kg</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Demo sencilla para clase: Flexbox + breakpoints (900px, 480px)
+  </footer>
+</body>
+</html>
