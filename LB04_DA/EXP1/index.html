@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica 01 - Formas de declarar JavaScript</title>
+</head>
+<body>
+  <header>
+    <h1>Formas de declarar JavaScript</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>A) En línea</h2>
+      <p id="saludo">Mensaje inicial</p>
+      <button onclick="alert('Hola desde JS en línea')">Alerta</button>
+      <button onclick="document.getElementById('saludo').textContent='Texto actualizado'">Cambiar texto</button>
+    </section>
+
+    <section>
+      <h2>B) En etiqueta &lt;script&gt;</h2>
+      <button id="btn-toggle">Mostrar/Ocultar</button>
+      <div id="panel">Panel visible</div>
+      <script>
+        const btn = document.getElementById('btn-toggle');
+        const panel = document.getElementById('panel');
+        btn.addEventListener('click', () => {
+          if (panel.style.display === 'none') {
+            panel.style.display = 'block';
+          } else {
+            panel.style.display = 'none';
+          }
+        });
+      </script>
+    </section>
+
+    <section>
+      <h2>C) En archivo vinculado</h2>
+      <button id="btn-sumar">Sumar 7 + 5</button>
+      <div id="resultado">Resultado: </div>
+    </section>
+  </main>
+
+  <script src="codigo.js"></script>
+</body>
+</html>

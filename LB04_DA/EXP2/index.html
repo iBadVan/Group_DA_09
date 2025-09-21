@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Práctica 02 - Recursos del Lenguaje</title>
+</head>
+<body>
+  <h1>Práctica 02</h1>
+
+  <h2>a) Variables y constantes (ámbito de bloque)</h2>
+  <pre id="a-out"></pre>
+
+  <h2>b) Elevación (hoisting)</h2>
+  <pre id="b-out"></pre>
+
+  <h2>c) console.log() y scope</h2>
+  <pre id="c-out"></pre>
+
+  <h2>d) Tipos de datos y conversiones</h2>
+  <pre id="d-out"></pre>
+
+  <script>
+    const outA = document.getElementById('a-out');
+    const outB = document.getElementById('b-out');
+    const outC = document.getElementById('c-out');
+    const outD = document.getElementById('d-out');
+
+    {
+      let v = 10;
+      const C = 20;
+      outA.textContent += 'Dentro del bloque: v=' + v + ', C=' + C + '\n';
+      console.log('a) Dentro del bloque:', v, C);
+    }
+    try { outA.textContent += 'Fuera del bloque v: ' + v + '\n'; }
+    catch { outA.textContent += 'Fuera del bloque v: ReferenceError\n'; }
+    try { outA.textContent += 'Fuera del bloque C: ' + C + '\n'; }
+    catch { outA.textContent += 'Fuera del bloque C: ReferenceError\n'; }
+
+    outB.textContent += (console.log(x === undefined), 'console.log(x === undefined)\n');
+    var x = 3;
+    var myvar = 'my value';
+    (function() {
+      outB.textContent += (console.log(myvar), 'console.log(myvar) dentro IIFE\n');
+      var myvar = 'valor local';
+    })();
+
+    let sinAsignar;
+    console.log('c) sinAsignar =', sinAsignar);
+    outC.textContent += 'sinAsignar = ' + sinAsignar + '\n';
+    function externa() {
+      let a = 'externa:a';
+      function interna() {
+        let b = 'interna:b';
+        console.log('c) interna ve a:', a);
+        console.log('c) interna ve b:', b);
+        outC.textContent += 'interna ve a: ' + a + '\n';
+        outC.textContent += 'interna ve b: ' + b + '\n';
+      }
+      interna();
+      try { console.log(b); }
+      catch { outC.textContent += 'externa no ve b: ReferenceError\n'; }
+    }
+    externa();
+
+    var answer = 42;
+    answer = 'Gracias por todo el pescado...';
+    outD.textContent += 'answer ahora es: ' + answer + '\n';
+
+    const pruebas = [
+      ['parseInt("F", 16)', parseInt("F", 16)],
+      ['parseInt("17", 8)', parseInt("17", 8)],
+      ['parseInt("15", 10)', parseInt("15", 10)],
+      ['parseInt(15.99, 10)', parseInt(15.99, 10)],
+      ['parseInt("FXX123", 16)', parseInt("FXX123", 16)],
+      ['parseInt("1111", 2)', parseInt("1111", 2)],
+      ['parseInt("15*3", 10)', parseInt("15*3", 10)],
+      ['parseInt("12", 13)', parseInt("12", 13)],
+      ['parseInt("Hello", 8)', parseInt("Hello", 8)],
+      ['parseInt("0x7", 10)', parseInt("0x7", 10)],
+      ['parseInt("546", 2)', parseInt("546", 2)]
+    ];
+    for (const [expr, val] of pruebas) {
+      outD.textContent += expr + ' -> ' + val + '\n';
+      console.log('d)', expr, '=>', val);
+    }
+
+    var howMany = 10;
+    alert("howMany.toString() is " + howMany.toString());
+    alert("45 .toString() is " + (45).toString());
+    var x2 = 7;
+    alert(x2.toString(2));
+  </script>
+</body>
+</html>
