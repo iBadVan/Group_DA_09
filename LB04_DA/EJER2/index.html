@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Mi Conversor de Temperatura - byIván777</h1>
+        <p>Ingresa una temperatura, selecciona la unidad de origen y la unidad de destino.</p>
+
+        <input type="number" id="entradaTemperatura" placeholder="Ingresa temperatura">
+
+        <label for="escalaOrigen">Convertir desde:</label>
+        <select id="escalaOrigen">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+        </select>
+
+        <label for="escalaDestino">Convertir a:</label>
+        <select id="escalaDestino">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+        </select>
+
+        <div class="botones">
+            <button id="botonConvertir">Convertir</button>
+            <button id="botonLimpiar">Limpiar</button>
+        </div>
+
+        
+        <div id="resultado"></div>
+
+        
+        <h2>Historial de Conversiones</h2>
+        <ul id="historial"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
