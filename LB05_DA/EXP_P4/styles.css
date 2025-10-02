@@ -1,0 +1,33 @@
+:root {
+  --bs-primary: #0766ff;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.small-shadow {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero {
+  background: #f5f8ff;
+}
+.hero .btn {
+  border-radius: 0.6rem;
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 576px) {
+  .hero {
+    text-align: center;
+  }
+  .hero .btn {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
