@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap – Componentes por secciones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Sass -->
+  <link rel="stylesheet" href="scss/styles.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">COMPONENTES DE Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#grid">Grid</a></li>
+        <li class="nav-item"><a class="nav-link" href="#botones">Botones</a></li>
+        <li class="nav-item"><a class="nav-link" href="#formulario">Formulario</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tabla">Tabla</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tarjetas">Tarjetas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#extras">Extras</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-light py-5">
+  <div class="container">
+    <h1 class="display-6">Componentes de Bootstrap</h1>
+    <p class="mb-0">Container, Grid y componentes separados por secciones.</p>
+  </div>
+</header>
+
+<section id="grid" class="container py-5">
+  <h2 class="h4 mb-3">Estructura: Container / Row / Col</h2>
+  <div class="row g-3">
+    <div class="col-md-8">
+      <div class="p-3 bg-primary text-white rounded">Col 8/12</div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-3 bg-secondary text-white rounded">Col 4/12</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 bg-info text-white rounded">Col 6/12</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 bg-warning rounded">Col 6/12</div>
+    </div>
+  </div>
+</section>
+
+<section id="botones" class="container py-5">
+  <h2 class="h4 mb-3">Botones</h2>
+  <div class="d-flex flex-wrap gap-2">
+    <!-- Botón Sass -->
+    <button class="btn btn-brand">Brand (Sass)</button>
+
+    <!-- Botones Bootstrap  -->
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-light">Light</button>
+    <button class="btn btn-dark">Dark</button>
+
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary">Izq</button>
+      <button class="btn btn-outline-primary">Centro</button>
+      <button class="btn btn-outline-primary">Der</button>
+    </div>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Acción</a></li>
+        <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="formulario" class="container py-5">
+  <h2 class="h4 mb-3">Formularios</h2>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Nombre</label>
+      <input type="text" class="form-control" placeholder="ivancito">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Correo</label>
+      <input type="email" class="form-control" placeholder="correoinventadito@ucsp.edu.pe">
+    </div>
+    <div class="col-12">
+      <label class="form-label">Mensaje</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+    <div class="col-12">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="chk1">
+        <label class="form-check-label" for="chk1">Acepto términos</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="r" id="r1">
+        <label class="form-check-label" for="r1">Opción A</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="r" id="r2">
+        <label class="form-check-label" for="r2">Opción B</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <!-- Puedes cambiar este a btn-brand si quieres mostrar más personalización -->
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
+</section>
+
+<section id="tabla" class="container py-5">
+  <h2 class="h4 mb-3">Tablas</h2>
+  <table class="table table-striped table-bordered align-middle">
+    <thead class="table-dark">
+      <tr><th>#</th><th>Nombre</th><th>Correo</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Ana Lucia</td><td>analucia@ucsm.edu.pe</td></tr>
+      <tr><td>2</td><td>Ivan Reaño</td><td>ivan.reano@unsa.edu.pe</td></tr>
+      <tr><td>3</td><td>Mauricio Lazo</td><td>mauricio.lazo@ucsm.edu.pe</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="tarjetas" class="container py-5">
+  <h2 class="h4 mb-3">Tarjetas</h2>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <!-- Tarjeta Sass -->
+      <div class="card card--featured h-100">
+        <img src="https://picsum.photos/600/300?1" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Tarjeta 1</h5>
+          <p class="card-text">Ejemplo de card con imagen y botón.</p>
+          <a href="#" class="btn btn-brand">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Tarjeta 2</h5>
+          <p class="card-text">Solo cuerpo de tarjeta.</p>
+          <span class="badge text-bg-success">Nuevo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="extras" class="container py-5">
+  <h2 class="h4 mb-3">Extras</h2>
+
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="#">Sección</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Actual</li>
+    </ol>
+  </nav>
+
+  <div class="alert alert-info">Este es un alert informativo.</div>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="accordion" id="acc">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#c1">Acordeón 1</button>
+          </h2>
+          <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#acc">
+            <div class="accordion-body">Contenido del acordeón.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#c2">Acordeón 2</button>
+          </h2>
+          <div id="c2" class="accordion-collapse collapse" data-bs-parent="#acc">
+            <div class="accordion-body">Otro contenido.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <ul class="list-group mb-3">
+        <li class="list-group-item active">Elemento activo</li>
+        <li class="list-group-item">Elemento</li>
+        <li class="list-group-item">Elemento</li>
+      </ul>
+
+      <ul class="nav nav-tabs mb-3" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#t1" type="button">Tab 1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#t2" type="button">Tab 2</button>
+        </li>
+      </ul>
+      <div class="tab-content mb-3">
+        <div class="tab-pane fade show active p-3 border" id="t1" role="tabpanel">Contenido Tab 1</div>
+        <div class="tab-pane fade p-3 border" id="t2" role="tabpanel">Contenido Tab 2</div>
+      </div>
+
+      <div class="progress mb-3">
+        <div class="progress-bar" style="width: 60%;">60%</div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="spinner-border" role="status" aria-label="cargando"></div>
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#demoModal">Abrir modal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center p-3">
+  <small>&copy; 2025 – Demo Bootstrap</small>
+</footer>
+
+<div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal</h5>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        Este es un ejemplo de ventana modal.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button class="btn btn-primary">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

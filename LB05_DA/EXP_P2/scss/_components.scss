@@ -1,0 +1,9 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "functions" as *;
+
+.navbar {
+  .nav-link { padding-inline: $space-2; &:hover { color: $brand; } }
+}
+.card { border-radius: $radius; @include shadow(1); }
+.btn-brand { @include btn-variant($brand, $brand-contrast); }
