@@ -1,0 +1,34 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "functions" as *;
+
+header{
+  background: linear-gradient(180deg, #f8f9fa, #fff);
+  padding-block: $space-4;
+  h1, .lead{ font-family: $font-base; }
+}
+
+.navbar{
+  .navbar-brand{ font-weight: 700; letter-spacing: .2px; }
+  .nav-link{
+    padding-inline: $space-2;
+    &:hover{ color: tone($brand, 8%); }
+  }
+}
+
+.btn-brand{ @include btn-variant($brand, $brand-contrast); }
+
+.badge{
+  &.badge--nuevo{ background: tone($brand, 10%); }
+  &.badge--oferta{ background: #dc3545; }
+}
+
+.card{
+  @include rounded($radius);
+  @include shadow(1);
+  .card-title{ font-size: rem(18); }
+  .card-text{ font-size: rem(14); }
+  &.card--featured{ border: 2px solid tone($brand, 8%); @include shadow(2); }
+}
+
+.modal-content{ @include rounded($radius); }

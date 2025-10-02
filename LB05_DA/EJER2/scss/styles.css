@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* px → rem sin división con / */
+/* Tono: números positivos = oscurecer, negativos = aclarar
+   Ej.: tone(#0d6efd, 8%) → oscurece 8%
+        tone(#0d6efd, -10%) → aclara 10% */
+header {
+  background: linear-gradient(180deg, #f8f9fa, #fff);
+  padding-block: 1.5rem;
+}
+header h1, header .lead {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.navbar .nav-link {
+  padding-inline: 0.5rem;
+}
+.navbar .nav-link:hover {
+  color: rgb(1.8459016393, 91.3721311475, 223.3540983607);
+}
+
+.btn-brand {
+  background: #0d6efd;
+  color: #ffffff;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  transition: filter 0.2s ease, transform 0.05s ease-in-out;
+}
+.btn-brand:hover {
+  filter: brightness(0.92);
+}
+.btn-brand:active {
+  transform: translateY(1px);
+}
+
+.badge.badge--nuevo {
+  background: rgb(1.762295082, 87.2336065574, 213.237704918);
+}
+.badge.badge--oferta {
+  background: #dc3545;
+}
+
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card .card-title {
+  font-size: 1.125rem;
+}
+.card .card-text {
+  font-size: 0.875rem;
+}
+.card.card--featured {
+  border: 2px solid rgb(1.8459016393, 91.3721311475, 223.3540983607);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.modal-content {
+  border-radius: 0.75rem;
+}
+
+.section {
+  padding-block: 1.5rem;
+}
+
+.container-narrow {
+  max-width: 860px;
+  margin-inline: auto;
+}/*# sourceMappingURL=styles.css.map */

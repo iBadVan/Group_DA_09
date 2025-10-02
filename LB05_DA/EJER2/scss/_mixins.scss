@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+@mixin shadow($level: 1){
+  @if $level == 1 { box-shadow: $shadow-1; }
+  @else if $level == 2 { box-shadow: $shadow-2; }
+}
+
+@mixin btn-variant($bg, $fg: #fff){
+  background: $bg; color: $fg; border: 0; border-radius: $radius;
+  padding: .6rem 1.1rem; font-weight: 600;
+  transition: filter .2s ease, transform .05s ease-in-out;
+  &:hover{ filter: brightness(.92); }
+  &:active{ transform: translateY(1px); }
+}
+
+@mixin rounded($r: $radius){ border-radius: $r; }
+

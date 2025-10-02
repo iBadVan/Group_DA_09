@@ -1,0 +1,4 @@
+@use "variables" as *;
+
+.section{ padding-block: $space-4; }
+.container-narrow{ max-width: 860px; margin-inline: auto; }
