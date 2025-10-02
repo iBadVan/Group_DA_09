@@ -1,0 +1,35 @@
+$primary: #0766ff;
+$secondary: #6c757d;
+$bg-hero: #f5f8ff;
+
+@mixin soft-shadow($blur: 10px) {
+  box-shadow: 0 6px $blur rgba(0,0,0,.08);
+}
+
+:root {
+  --bs-primary: #{$primary};
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.small-shadow { @include soft-shadow(12px); }
+
+.hero {
+  background: $bg-hero;
+  .btn {
+    border-radius: .6rem;
+  }
+}
+
+.card {
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+@media (max-width: 576px) {
+  .hero {
+    text-align: center;
+    .btn { width: 100%; }
+  }
+}
