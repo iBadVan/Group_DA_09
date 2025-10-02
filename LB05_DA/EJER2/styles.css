@@ -1,0 +1,57 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+body .header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+body .header .title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+body .header .subtitle {
+  font-size: 1.2rem;
+  color: rgb(161.9142857143, 197.9142857143, 240.0857142857);
+}
+
+.card {
+  background: white;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.card h2 {
+  margin-bottom: 1rem;
+  color: rgb(52.0214285714, 130.5214285714, 222.4785714286);
+}
+.card p {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #4a90e2;
+  color: white;
+  padding: 0.8333333333rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: rgb(34.3857142857, 117.3857142857, 214.6142857143);
+}
+.btn:active {
+  background: rgb(95.9785714286, 157.4785714286, 229.5214285714);
+}/*# sourceMappingURL=styles.css.map */
