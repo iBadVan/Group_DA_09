@@ -1,0 +1,57 @@
+/* Estilos generales para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el encabezado de la tabla */
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para las filas al pasar el mouse por encima */
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Estilo para el formulario */
+form {
+  margin-top: 20px;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
