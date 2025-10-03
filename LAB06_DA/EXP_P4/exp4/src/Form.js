@@ -30,14 +30,14 @@ class Form extends Component {
       <form onSubmit={this.handleSubmit}>
         <input
           type="text"
-          name="name"  // Debe coincidir con el nombre de la propiedad en el estado
+          name="name" 
           value={this.state.name}
           onChange={this.handleChange}
           placeholder="Nombre"
         />
         <input
           type="text"
-          name="job"  // Debe coincidir con el nombre de la propiedad en el estado
+          name="job"
           value={this.state.job}
           onChange={this.handleChange}
           placeholder="Chamba"
