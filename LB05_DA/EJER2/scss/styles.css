@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* px → rem sin división con / */
-/* Aclara/Oscurece con color.adjust (no deprecado) */
-/* Helpers tipo tint/shade (opcionales) */
 /* ========== Header */
 header {
   background: linear-gradient(180deg, #f8f9fa, #fff);
