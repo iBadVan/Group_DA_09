@@ -1,4 +1,20 @@
 @use "variables" as *;
 
-.section{ padding-block: $space-4; }
-.container-narrow{ max-width: 860px; margin-inline: auto; }
+/* Grilla de productos */
+.products-grid{
+  display: grid;
+  gap: $space-4;
+
+  /* móvil */
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+/* sm ≥ 576px: 2 columnas */
+@media (min-width: 576px){
+  .products-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* lg ≥ 992px: 3 columnas */
+@media (min-width: 992px){
+  .products-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

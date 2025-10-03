@@ -3,100 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AQP Store – Productos</title>
+  <title>TulitaStore – Catálogo</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Tus estilos (Sass compilado) -->
   <link rel="stylesheet" href="scss/styles.css">
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">AQP Store</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <a class="navbar-brand" href="index.html">Tulita<span class="text-primary">Store</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="nav" class="collapse navbar-collapse">
+      <div id="navMain" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="productos.html">Productos</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="py-4 bg-light border-bottom">
-    <div class="container">
-      <h1 class="h3 mb-0">Catálogo</h1>
+  <!-- HEADER -->
+  <header class="bg-light border-bottom">
+    <div class="container py-4">
+      <h1 class="display-6 mb-0">Catálogo</h1>
+      <p class="text-muted mb-0">Explora nuestros productos disponibles en TulitaStore.</p>
     </div>
   </header>
 
-  <main class="container py-4">
-    <form class="row g-3 align-items-end mb-4">
-      <div class="col-sm-6 col-lg-3">
-        <label class="form-label">Buscar</label>
-        <input type="search" class="form-control" placeholder="Nombre del producto">
+  <!-- FILTROS -->
+  <section class="container py-4">
+    <form class="row g-3 align-items-end">
+      <div class="col-12 col-md-4">
+        <label for="q" class="form-label">Buscar</label>
+        <input id="q" type="text" class="form-control" placeholder="Nombre del producto">
       </div>
-      <div class="col-sm-6 col-lg-3">
-        <label class="form-label">Categoría</label>
-        <select class="form-select">
-          <option value="">Todas</option>
+
+      <div class="col-6 col-md-3">
+        <label for="cat" class="form-label">Categoría</label>
+        <select id="cat" class="form-select">
+          <option selected>Todas</option>
+          <option>Laptops</option>
           <option>Accesorios</option>
-          <option>Electrónica</option>
-          <option>Hogar</option>
         </select>
       </div>
-      <div class="col-sm-6 col-lg-3">
-        <label class="form-label">Precio máx.</label>
-        <input type="number" class="form-control" placeholder="S/ 300">
+
+      <div class="col-6 col-md-3">
+        <label for="price" class="form-label">Precio máx.</label>
+        <input id="price" type="text" class="form-control" placeholder="S/ 3000">
       </div>
-      <div class="col-sm-6 col-lg-3 d-grid">
-        <button class="btn btn-brand">Filtrar</button>
+
+      <div class="col-12 col-md-2 d-grid">
+        <button type="button" class="btn btn-brand">Filtrar</button>
       </div>
     </form>
+  </section>
 
-    <div class="row g-3">
-      <!-- Reutiliza la misma card -->
-      <article class="col-sm-6 col-lg-4">
-        <div class="card h-100">
-          <img src="https://picsum.photos/600/400?random=4" class="card-img-top" alt="">
-          <div class="card-body">
-            <h3 class="card-title h5">Producto D</h3>
-            <span class="badge badge--nuevo me-2">Nuevo</span>
-            <p class="card-text mt-2 mb-3">Texto corto del producto D.</p>
-            <a href="producto.html" class="btn btn-outline-primary">Ver detalle</a>
-          </div>
+  <!-- LISTA DE PRODUCTOS -->
+  <section class="container pb-5">
+    <div class="products-grid">
+      <!-- PRODUCTO A -->
+      <article class="card card--product">
+        <img src="img/laptopasuszenbookproduoux8406ma-ps99t.jpg" class="card-img-top" alt="ASUS Zenbook Pro Duo UX8406MA-PS99T">
+        <div class="card-body">
+          <h5 class="card-title">
+            LAPTOP ASUS ZENBOOK PRO DUO UX8406MA-PS99T | ULTRA 9 185H | 32GB RAM | 1TB SSD |
+            DUAL 14.5" OLED TOUCHSCREEN | WIN11 | INKWELL GRAY | STYLUS BACKPACK
+          </h5>
+          <p class="card-text">
+            Dúo de pantallas OLED para quienes hacen mil cosas a la vez: edición, música, streaming y tareas pesadas.
+            Ultra 9, 32&nbsp;GB y 1&nbsp;TB para que nada se atore; incluye stylus y mochila para salir a producir sin excusas.
+          </p>
+          <a href="producto.html?id=A" class="btn btn-brand">Ver detalle</a>
         </div>
       </article>
-      <article class="col-sm-6 col-lg-4">
-        <div class="card h-100">
-          <img src="https://picsum.photos/600/400?random=5" class="card-img-top" alt="">
-          <div class="card-body">
-            <h3 class="card-title h5">Producto E</h3>
-            <span class="badge badge--oferta">Oferta</span>
-            <p class="card-text mt-2 mb-3">Texto corto del producto E.</p>
-            <a href="producto.html" class="btn btn-brand">Ver detalle</a>
-          </div>
+
+      <!-- PRODUCTO B -->
+      <article class="card card--product">
+        <img src="img/laptoasuszenbookduoux8406ma-ds76t.jpg" class="card-img-top" alt="ASUS Zenbook Duo UX8406MA-DS76T">
+        <div class="card-body">
+          <h5 class="card-title">
+            LAPTOP ASUS ZENBOOK DUO UX8406MA-DS76T | ULTRA 7 155H | 16GB RAM | 1TB SSD |
+            DUAL 14" WUXGA TOUCHSCREENS OLED | WIN11 | INKWELL GRAY | DETACHABLE KEYBOARD
+          </h5>
+          <p class="card-text">
+            La hermana práctica del Pro Duo: doble OLED táctil, teclado desmontable y potencia Ultra&nbsp;7 ideal
+            para productividad seria, clases y creación de contenido sin que el ventilador te grite.
+          </p>
+          <a href="producto.html?id=B" class="btn btn-brand">Ver detalle</a>
         </div>
       </article>
-      <article class="col-sm-6 col-lg-4">
-        <div class="card h-100">
-          <img src="https://picsum.photos/600/400?random=6" class="card-img-top" alt="">
-          <div class="card-body">
-            <h3 class="card-title h5">Producto F</h3>
-            <p class="card-text">Texto corto del producto F.</p>
-            <a href="producto.html" class="btn btn-outline-primary">Ver detalle</a>
-          </div>
+
+      <!-- PRODUCTO C -->
+      <article class="card card--product">
+        <img src="img/laptopasustuffx507vi.jpg" class="card-img-top" alt="ASUS TUF FX507VI">
+        <div class="card-body">
+          <h5 class="card-title">
+            LAPTOP ASUS TUF FX507VI | I7-13620H | 16GB RAM | 1TB SSD | 15.6" 144HZ IPS | WIN11 |
+            RTX 4070 8GB | MECHA GREY
+          </h5>
+          <p class="card-text">
+            Diseñada para jugar y trabajar duro: panel 144&nbsp;Hz para fluidez real, RTX&nbsp;4070 para renders y gaming serio,
+            y chasis TUF para aguantar tu mochila y tus semestres más intensos.
+          </p>
+          <a href="producto.html?id=C" class="btn btn-brand">Ver detalle</a>
         </div>
       </article>
     </div>
-  </main>
+  </section>
 
-  <footer class="bg-dark text-white text-center p-3 mt-5">
-    <small>&copy; 2025 – AQP Store</small>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center p-3">
+    <small>&copy; 2025 – TulitaStore</small>
   </footer>
 
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
-
-

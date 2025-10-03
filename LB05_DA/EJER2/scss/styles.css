@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* px → rem sin división con / */
-/* Tono: números positivos = oscurecer, negativos = aclarar
-   Ej.: tone(#0d6efd, 8%) → oscurece 8%
-        tone(#0d6efd, -10%) → aclara 10% */
+/* Aclara/Oscurece con color.adjust (no deprecado) */
+/* Helpers tipo tint/shade (opcionales) */
+/* ========== Header */
 header {
   background: linear-gradient(180deg, #f8f9fa, #fff);
   padding-block: 1.5rem;
@@ -11,6 +11,7 @@ header h1, header .lead {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* ========== Navbar */
 .navbar .navbar-brand {
   font-weight: 700;
   letter-spacing: 0.2px;
@@ -19,9 +20,10 @@ header h1, header .lead {
   padding-inline: 0.5rem;
 }
 .navbar .nav-link:hover {
-  color: rgb(1.8459016393, 91.3721311475, 223.3540983607);
+  color: rgb(11.96, 101.2, 232.76);
 }
 
+/* ========== Botón de marca */
 .btn-brand {
   background: #0d6efd;
   color: #ffffff;
@@ -38,13 +40,15 @@ header h1, header .lead {
   transform: translateY(1px);
 }
 
+/* ========== Badges */
 .badge.badge--nuevo {
-  background: rgb(1.762295082, 87.2336065574, 213.237704918);
+  background: rgb(37.2, 124.5, 253.2);
 }
 .badge.badge--oferta {
   background: #dc3545;
 }
 
+/* ========== Cards (base) */
 .card {
   border-radius: 0.75rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -56,19 +60,43 @@ header h1, header .lead {
   font-size: 0.875rem;
 }
 .card.card--featured {
-  border: 2px solid rgb(1.8459016393, 91.3721311475, 223.3540983607);
+  border: 2px solid rgb(32.36, 121.6, 253.16);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
+.card--product .card-img-top {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: #fff;
+  padding: 8px;
+  border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+  display: block;
+}
+
+/* ========== Modal */
 .modal-content {
   border-radius: 0.75rem;
 }
 
-.section {
-  padding-block: 1.5rem;
+/* Grilla de productos */
+.products-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* móvil */
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.container-narrow {
-  max-width: 860px;
-  margin-inline: auto;
+/* sm ≥ 576px: 2 columnas */
+@media (min-width: 576px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* lg ≥ 992px: 3 columnas */
+@media (min-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }/*# sourceMappingURL=styles.css.map */

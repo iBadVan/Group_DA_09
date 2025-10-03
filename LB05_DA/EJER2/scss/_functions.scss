@@ -6,14 +6,16 @@
   @return math.div($px, 16) * 1rem;
 }
 
-/* Tono: números positivos = oscurecer, negativos = aclarar
-   Ej.: tone(#0d6efd, 8%) → oscurece 8%
-        tone(#0d6efd, -10%) → aclara 10% */
+/* Aclara/Oscurece con color.adjust (no deprecado) */
 @function tone($c, $amount) {
   @if $amount == 0 { @return $c; }
   @if $amount > 0 {
-    @return color.adjust($c, $lightness: -$amount); // darken
+    @return color.adjust($c, $lightness: -$amount); // oscurece
   } @else {
-    @return color.adjust($c, $lightness: abs($amount)); // lighten
+    @return color.adjust($c, $lightness: abs($amount)); // aclara
   }
 }
+
+/* Helpers tipo tint/shade (opcionales) */
+@function tint($c, $pct){ @return color.mix(white, $c, $pct); }
+@function shade($c, $pct){ @return color.mix(black,  $c, $pct); }
