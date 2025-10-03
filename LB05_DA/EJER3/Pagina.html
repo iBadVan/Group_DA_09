@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Aquí van los metadatos y enlaces a hojas de estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .categoria-card {
+            transition: box-shadow 0.2s, transform 0.2s;
+            border-radius: 1rem;
+        }
+        .categoria-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .card-title {
+            margin-bottom: 0.5rem;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #007bff !important;
+        }
+        .cta-section {
+            background: linear-gradient(90deg, #0dcaf0 60%, #0d6efd 100%);
+            color: #fff;
+            border-radius: 1rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="Pagina.html">
+                <img src="logo.jpg" alt="Logo" width="40" height="40" style="object-fit:cover;" class="mr-2 rounded-circle border border-primary">
+                <span class="ml-2">MiTienda</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-primary" href="Ejercicio_3/Pagina.html">Electrónica</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="Ejercicio_3/Pagina.html">Ropa</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary" href="Ejercicio_3/Pagina.html">Hogar</a></li>
+                </ul>
+                <a href="carrito.html" class="btn btn-outline-primary ml-3">
+                    <span class="mr-1">&#128722;</span> Carrito
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Llamado a la acción -->
+    <section class="container cta-section text-center">
+        <h2 class="font-weight-bold">¡Descubre las mejores ofertas!</h2>
+        <p class="lead">Explora nuestra tienda y encuentra productos increíbles a precios únicos.</p>
+        <a href="producto.html" class="btn btn-light btn-lg font-weight-bold px-4">Ver productos destacados</a>
+    </section>
+
+    <!-- Secciones de categorías estilizadas -->
+    <section class="container mt-4">
+        <div class="row g-4">
+            <div class="col-md-4 mb-4">
+                <div class="card categoria-card border-0 shadow-sm h-100">
+                    <img src="Ventilador.jpg" class="card-img-top rounded-top" alt="Electrónica" style="height:180px;object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold text-primary">Electrónica</h5>
+                        <a href="Ejercicio_3/Pagina.html" class="btn btn-primary w-100">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card categoria-card border-0 shadow-sm h-100">
+                    <img src="Camisa.jpg" class="card-img-top rounded-top" alt="Ropa" style="height:180px;object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold text-primary">Ropa</h5>
+                        <a href="Ejercicio_3/Pagina.html" class="btn btn-primary w-100">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card categoria-card border-0 shadow-sm h-100">
+                    <img src="Silla.jpg" class="card-img-top rounded-top" alt="Hogar" style="height:180px;object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold text-primary">Hogar</h5>
+                        <a href="Ejercicio_3/Pagina.html" class="btn btn-primary w-100">Ver productos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aquí va el pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2023 Tienda en Línea. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
