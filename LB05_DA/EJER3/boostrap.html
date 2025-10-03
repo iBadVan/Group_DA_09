@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estructura básica con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <section>
+        <h2>Apuntes</h2>
+        
+        <h4>Descripcion</h4>
+        <p>Bootstrap es un frmework que permite crear sitios web responsivos a traves de una metodologia mas sencilla y rapida que la forma convencional por css</p>
+        <h4>Puntos primarios</h4>
+        <p> Cuando se va a usar boostrap es necesario importar un referencia o link de boostrap en el head del documento html. <br>
+            para poder usar boostrap en un contenedor siempre es necesario definir la class:(para consiguientemente colocar todos los estilos ya que la nomenclatura de boostrap es diferente)
+                        
+        </p>
+        <h4>Puntos secundarios</h4>
+        <p>
+            boostrap trabaja con un sistema de 12 columnas, por lo que si se quiere dividir un contenedor en 2 partes iguales se debe colocar class="col-6" y si se quiere dividir en 3 partes iguales class="col-4" y asi sucesivamente. <br>
+            boostrap trabaja con un sistema de breakpoints que permite definir el comportamiento de los contenedores segun el tamanio de la pantalla, los breakpoints son: <br>
+            xs: extra small (menos de 576px) <br>
+            sm: small (576px o mas) <br>
+            md: medium (768px o mas) <br>
+            lg: large (992px o mas) <br>
+            xl: extra large (1200px o mas) <br>
+            xxl: extra extra large (1400px o mas) <br>
+            para definir el comportamiento de un contenedor segun el tamanio de la pantalla se debe colocar class="col-{breakpoint}-{numero de columnas}" <br>
+            ejemplo: class="col-sm-6 col-md-4 col-lg-3" <br>
+            esto significa que en pantallas pequeñas (sm) el contenedor ocupara 6 columnas, en pantallas medianas (md) ocupara 4 columnas y en pantallas grandes (lg) ocupara 3 columnas. <br>
+            boostrap trabaja con dos tipos de contenedores: container y container-fluid. <br>
+            container: es un contenedor con un ancho fijo que cambia segun el tamanio de la pantalla. <br>
+            container-fluid: es un contenedor que ocupa el 100% del ancho de la pantalla. <br>
+            boostrap trabaja con un sistema de margenes y paddings que permite definir los margenes y paddings de los contenedores. <br>
+            para definir los margenes se debe colocar class="m{lado}-{tamanio}" donde lado puede ser: t (top), b (bottom), s (start), e (end), x (left y right), y (top y bottom), y sin lado (todos lados). El tamanio puede ser un numero del 0 al 5 donde 0 es sin margen y 5 es el margen mas grande. <br>
+            ejemplo: class="mt-2 mb-5 ms-2 me-2 mx-auto" <br>
+
+            
+        </p>
+        
+    </section>
+    <section>
+        <h2>Ejemplo de los tipos de contenedores</h2>
+        <h3>Contenedor normal</h3>
+        <p>Este es un contenedor normal con ancho fijo</p>
+        <div class="container bg-primary">
+            contenedor ancho normal
+        </div>
+
+        <h3>Contenedor fluido</h3>
+        <p>Este es un contenedor que ocupa el 100% del ancho de la pantalla</p>
+        <div class="container-fluid bg-secondary">
+            contenedor ancho completo
+        </div>
+
+        <h3>contenedor responsivo</h3>
+        <p>Este es un contenedor que cambia su comportamiento segun el tamanio cambia segun el tamanio si es que se trabajo con dentro de otro contenedor</p>
+    </section>
+    <section>
+        <h3>Margenes</h3>
+        Son para poder definir los margenes que va a tener un contenedor ya sea en la parte arriba mt-2, abajo mb-5, izquierda ms-2, derecha me-2, todos lados m-3, y si se quiere centrar horizontalmente mx-auto
+        <div class="container mt-4 mb-5 bg-info" >Contenedor con margenes</div>
+    </section>
+    <section>
+        <h3>Espacios dentro del contenedor (padding)</h3>
+        <p>Los espacios dentro del contenedor se definen usado la siguiente nomenclatura despues de haber definido el tipo de contenedor p-5 </p>
+        <div class="container text-center p-5 bg-info">
+            Contenido del contenedor con padding
+        </div>
+    </section>
+    <section>
+        <h3>Colores de boostrap</h3>
+        <p>Para manejar de manera los colores que va a tener nuestros elementos asi mismo como el texto de nuestro contenedor se puede usar bg-ejemplo  y text-color o centrado</p>
+        <div class="container bg-primary text-white">bg-primary</div>
+        <div class="container bg-secondary ">bg-secondary</div>
+        <div class="container bg-success">bg-success</div>
+        <div class="container bg-info">bg-info</div>
+        <div class="container bg-warning">bg-warning</div>
+        <div class="container bg-danger">bg-danger</div>
+        <div class="container bg-cyan">bg-cyan</div>
+        <p>Ene l ultimo intento no es psoible usar un color que no sean los anteriores de bg-cyan</p>
+    </section>
+    <section>
+        <h2>Tamanio y alineacion del Contenido</h2>
+        <p>Es posible controlar el tamanio de  nuestor contenedor en base a un porcentaje de la pantalla simplemnte colocando la incial de la palabra witdh <br>
+        tambien se puede controlar el procentaje del anto teniendo en cuenta la primera letra incial de hight <h-100>
+        Ya anteriormente tambien se uso text-center para poder controlar el centrado del texto pero se puede llegar a suar end o start</p>
+        Podemos modificar tambien el tipo de estrcutura que va a tener nuestro contenedor como defnir flexbox o grid de ahi usar propiedades como justify content-center o align-items-center
+        </p>
+        <div class="container-fluid w-50 h-100 bg-info  text-start">texto ejemplo y con 8% de altura y 60% de ancho</div>
+
+        <div class="container w-100 h-70 bg-warning d-flex justify-content-center align-items-center">Contenido centrado con justify-content-center y align items  nm</div>
+
+    </section>
+    <section>
+        <h2>Bordes y Esquinas</h2>
+        <p>Para definir las esquinas de un elemento se usa la siguiente nomenclatura para que sucede para la mayoria de las siguientes propiedasdes es necesario que este usando border</p>
+        <div class="container border border-primary rounded">
+            Contenedor con borde y esquinas redondeadas -rounded con un borde de color primary
+        </div>
+        <div class="container border border-primary rounded-circle">
+            Contenedor con borde y esquinas redondeadas -rounded-circle con un borde de color primary
+        </div>
+        <div class="container border border-danger shadow">
+            Contenedor con sombra notable, creo que casi no se nota asi que no seria tan dispensable o no consegui la manera de poder usarlo correctamente
+        </div>
+    </section>
+    <section >
+        <h2>Uso de los botones </h2>
+        <div class="container d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" onclick="inicio()">inicio</button>
+        <button type="button" class="btn btn-secondary" onclick="servicios()">servicio</button>
+        <button type="button" class="btn btn-success" onclick="contacto()">contacto</button>
+        </div>
+    </section>
+
+    
+</body>
+<script>
+    function inicio(){
+        alert("Haz seleccionado la opcion de inicio");
+    }
+    function servicios(){
+        alert("Haz seleccionado la opcion de servicios para mas informacion");
+    }
+    function contacto(){
+        alert("Haz seleccionado el area de contactos para mas informacion");
+    }
+</script>
+</html>
