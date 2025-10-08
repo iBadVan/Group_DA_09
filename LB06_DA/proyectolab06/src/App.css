@@ -1,0 +1,267 @@
+/* ---------------------------------------------------------------
+   ESTILOS BASE (por defecto de CRA, útiles para mantener compatibilidad)
+--------------------------------------------------------------- */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------------
+   ESTILOS GENERALES DEL PROYECTO
+   (Ajustes para formularios, tablas, navegación y layout global)
+--------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Contenedor general con márgenes */
+.contenedor {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   TABLAS
+--------------------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+td, th {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* ---------------------------------------------------------------
+   FORMULARIOS — Versión legible y en formato vertical
+--------------------------------------------------------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f3f4f6; /* texto claro sobre fondo oscuro */
+}
+
+input[type="text"],
+input:not([type]),
+input[type="url"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #111827;
+}
+
+input::placeholder {
+  color: #6b7280; /* gris legible */
+}
+
+input[type="button"],
+button {
+  align-self: center;
+  width: 150px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ---------------------------------------------------------------
+   NAVEGACIÓN
+--------------------------------------------------------------- */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------
+   ESTILOS PARA EL FONDO UCSM Y CAPA OSCURA
+--------------------------------------------------------------- */
+
+/* Fondo global (aplicado por el componente FondoUCSM.jsx) */
+.fondo-ucsm {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Capa semitransparente para mejorar legibilidad */
+.capa-oscura {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  max-height: 92vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ---------------------------------------------------------------
+   PEQUEÑOS AJUSTES DE ACCESIBILIDAD Y RESPONSIVIDAD
+--------------------------------------------------------------- */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ---------------------------------------------------------------
+   COMPLEMENTOS FINALES — Contraste, foco y detalles visuales
+--------------------------------------------------------------- */
+
+/* 1) Contraste correcto en tablas dentro de la capa oscura */
+.capa-oscura table {
+  background-color: #ffffff;
+}
+
+.capa-oscura table th,
+.capa-oscura table td {
+  color: #111827; /* texto oscuro legible */
+}
+
+.capa-oscura table th {
+  background-color: #f3f4f6; /* encabezado gris claro */
+}
+
+.capa-oscura table tr:hover td {
+  background-color: #f9fafb; /* leve resaltado al pasar el mouse */
+}
+
+/* 2) Botones dentro de la capa oscura (coherentes) */
+.capa-oscura button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.capa-oscura button:hover {
+  background-color: #1d4ed8;
+}
+
+/* 3) Inputs: foco visible y limpio */
+input[type="text"],
+input[type="url"],
+input:not([type]) {
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input:not([type]):focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* 4) Títulos dentro de la capa oscura: mejor lectura */
+.capa-oscura h1,
+.capa-oscura h2 {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  margin-top: 0;
+}
+
+/* 5) Separadores suaves */
+.capa-oscura hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 1rem 0;
+}
+
+/* 6) Avatares en tabla */
+.capa-oscura table img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
