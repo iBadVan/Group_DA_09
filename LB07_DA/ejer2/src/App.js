@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from './components/Header';
+import { UserProfile } from './components/UserProfile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <main style={{ padding: 16 }}>
+        <UserProfile />
+        <p>ESTA ES UNA PAGINA MUY SERIA, SEA SERIO COMO EL ELEMENTO 58 DE LA TABLA PERIODICA</p>
+      </main>
     </div>
   );
 }
