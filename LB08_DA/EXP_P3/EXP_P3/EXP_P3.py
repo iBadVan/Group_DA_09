@@ -48,7 +48,7 @@ def formulario_contacto():
     )
 
 
-@rx.page()   # ✅ OJO: con paréntesis
+@rx.page() 
 def index():
     return rx.center(
         formulario_contacto(),
