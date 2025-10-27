@@ -56,6 +56,3 @@ def index():
     )
 
 app = rx.App()
-# app.add_state(EstadoFormulario) ❌ no se necesita en 0.8.15
-# app.compile() ❌ tampoco se usa
-# No pongas add_state, Reflex ya reconoce el estado automáticamente
