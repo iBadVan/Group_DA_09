@@ -21,5 +21,3 @@ app.state = EstadoContador
 
 app.add_page(contador, route="/", title="Contador")
 
-if __name__ == "__main__":
-    app.run()
