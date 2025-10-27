@@ -39,6 +39,3 @@ def pagina_principal():
 app = rx.App()
 app.state = EstadoTareas
 app.add_page(pagina_principal, route="/", title="Lista de Tareas")
-
-if __name__ == "__main__":
-    app.run()
