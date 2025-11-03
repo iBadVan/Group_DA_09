@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  padding-top: 40px;
+}
+
+h1 {
+  color: #61dafb;
+  margin-bottom: 30px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.upload-form select,
+.upload-form input[type="file"] {
+  background-color: #20232a;
+  color: white;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 0.9em;
+}
+
+.upload-form button {
+  background-color: #61dafb;
+  color: #20232a;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-form button:hover {
+  background-color: #21a1f1;
+}
+
+h2 {
+  margin-top: 25px;
+  color: #ffffff;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.file-list li {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #61dafb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-list button {
+  background-color: transparent;
+  border: 1px solid #61dafb;
+  color: #61dafb;
+  border-radius: 5px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: 0.2s;
+}
+
+.file-list button:hover {
+  background-color: #61dafb;
+  color: #20232a;
+}
+
+.file-viewer {
+  margin-top: 25px;
+  text-align: left;
+  width: 80%;
+  max-width: 600px;
+  background-color: #20232a;
+  border: 1px solid #61dafb;
+  border-radius: 10px;
+  padding: 20px;
+  color: #ddd;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.file-viewer pre {
+  font-size: 0.8em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
