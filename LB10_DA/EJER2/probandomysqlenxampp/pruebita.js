@@ -1,31 +1,33 @@
-// Solicitando paquete de Mysql
+// Importar paquete de MySQL
 var mysql = require('mysql');
 
-// Configurando parámetros de conexión (puede variar según instalación)
+// Configurar parámetros de conexión
 var conexion = mysql.createConnection({
     host: 'localhost',
-    port: '8889',
-    database: 'musicdb',
+    port: '8889', // Cambia si tu MySQL usa otro puerto
+    database: 'peliculasdb',
     user: 'root',
     password: 'root',
 });
 
-// Realizando conexión o verificando si sucedió un error
+// Realizar conexión
 conexion.connect(function (err) {
     if (err) {
-        console.log("Error de conexion" + err.stack);
+        console.log("Error de conexión: " + err.stack);
         return;
     }
     console.log("Conectado al ID " + conexion.threadId);
 });
 
-//CAMBIAR LA DB Y HACER CONSULTA GOOD
-conexion.query('select * from albums', function (error, results) {
-    if (error)
-        throw error;
-    results.forEach(element => {
-        console.log(element);
+// Realizar consulta
+conexion.query('SELECT * FROM peliculas', function (error, results) {
+    if (error) throw error;
+
+    console.log("\n🎬 LISTADO DE PELÍCULAS 🎬\n");
+    results.forEach((peli) => {
+        console.log(`ID: ${peli.id} | Título: ${peli.titulo} | Director: ${peli.director} | Año: ${peli.anio} | Género: ${peli.genero}`);
     });
 });
 
+// Cerrar conexión
 conexion.end();
