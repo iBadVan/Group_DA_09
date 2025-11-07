@@ -1,10 +1,10 @@
 // Importar paquete de MySQL
-var mysql = require('mysql');
+var mysql = require('mysql2');
 
 // Configurar parámetros de conexión
 var conexion = mysql.createConnection({
     host: 'localhost',
-    port: '8889', // Cambia si tu MySQL usa otro puerto
+    port: '3306', // Cambia si tu MySQL usa otro puerto
     database: 'peliculasdb',
     user: 'root',
     password: 'root',
