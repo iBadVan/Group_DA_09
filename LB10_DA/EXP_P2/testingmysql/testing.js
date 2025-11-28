@@ -4,10 +4,10 @@ var mysql = require('mysql');
 // Configurando parámetros de conexión (puede variar según instalación)
 var conexion = mysql.createConnection({
     host: 'localhost',
-    port: '8889',
+    port: '3306',
     database: 'musicdb',
     user: 'root',
-    password: 'root',
+    password: '',
 });
 
 // Realizando conexión o verificando si sucedió un error

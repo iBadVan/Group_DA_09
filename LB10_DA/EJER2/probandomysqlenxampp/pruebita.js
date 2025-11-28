@@ -7,7 +7,7 @@ var conexion = mysql.createConnection({
     port: '3306', // Cambia si tu MySQL usa otro puerto
     database: 'peliculasdb',
     user: 'root',
-    password: 'root',
+    password: '',
 });
 
 // Realizar conexión
