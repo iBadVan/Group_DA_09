@@ -63,7 +63,7 @@ router.route('/alumnos/:id')
 
 .delete(async function(req, res) {
   try {
-    await Alumno.findByIdAndRemove(req.params.id);
+    await Alumno.findByIdAndDelete(req.params.id);
     res.json({ message: "Alumno eliminado con éxito" });
 
   } catch (error) {
